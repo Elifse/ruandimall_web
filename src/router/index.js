@@ -1,27 +1,72 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Login from '../views/Login.vue'
+import Index from '../views/Index.vue'
+import Home from '../components/Home.vue'
+import Goods from '../components/Goods.vue'
+import Menu from '../components/Menu.vue'
+import Quanxian from '../components/QuanXian.vue'
+import User from '../components/User.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    component: Login
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/index',
+    name: 'Index',
+    component: Index,
+    children: [
+      {
+        path: '/home',
+        name: 'Home',
+        component: Home
+      },
+      {
+        path: '/goods',
+        name: 'Goods',
+        component: Goods
+      },
+      {
+        path: '/menu',
+        name: 'Menu',
+        component: Menu
+      },
+      {
+        path: '/quanxian',
+        name: 'Quanxian',
+        component: Quanxian
+      },
+      {
+        path: '/user',
+        name: 'User',
+        component: User
+      }
+    ]
   }
 ]
 
 const router = new VueRouter({
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/') {
+    return next();
+  }
+
+  const token = window.sessionStorage.getItem('token');
+
+  if (token) {
+    return next();
+  }
+
+  next('/');
+})
+
 
 export default router

@@ -1,12 +1,34 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+
+    <!-- <el-button>按钮</el-button>
+    <el-date-picker
+      v-model="value1"
+      type="monthrange"
+      range-separator="至"
+      start-placeholder="开始日期"
+      end-placeholder="结束日期"
+    /> -->
+    <!-- 组件渲染标签 -->
+    <router-view />
   </div>
 </template>
+
+<script>
+import { Button, DatePicker } from 'element-ui'
+export default {
+  name: 'App',
+  components: {
+    'el-button': Button,
+    'el-date-picker': DatePicker
+  },
+  data () {
+    return {
+      value1: ''
+    }
+  }
+}
+</script>
 
 <style>
 #app {
