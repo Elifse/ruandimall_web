@@ -51,6 +51,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+	base: '/ruandimall', // 基础路径
   routes
 })
 
