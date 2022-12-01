@@ -2,12 +2,17 @@
   <div>
     <h1>用户管理</h1>
     <div class="insert">
-      <el-button type="primary" @click="add">添加用户</el-button> <div>
-      <el-input placeholder="请输入搜索关键词" size="small" v-model="userDto.search"></el-input>
-      <el-button type="primary" @click="searchUser()" >搜索</el-button>
+      <el-button type="primary" @click="add">添加用户</el-button>
+      <div>
+        <el-input
+          placeholder="请输入搜索关键词"
+          size="small"
+          v-model="userDto.search"
+        ></el-input>
+        <el-button type="primary" @click="searchUser()">搜索</el-button>
+      </div>
     </div>
-    </div>
-   
+
     <el-table :data="user" style="width: 100%">
       <el-table-column prop="userName" label="用户名" width="180">
       </el-table-column>
@@ -92,7 +97,7 @@
 export default {
   data() {
     return {
-      userDto:{
+      userDto: {
         search: "",
       },
       userDetail: {

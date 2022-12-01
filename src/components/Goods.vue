@@ -3,9 +3,14 @@
     <h1>商品管理</h1>
     <div class="insert">
       <el-button type="primary" @click="add">添加商品</el-button>
-      <el-input placeholder="请输入搜索关键词" size="small" v-model="goodDto.search"></el-input>
-      <el-button type="primary" @click="searchGood()" >搜索</el-button>
-
+      <div>
+        <el-input
+          placeholder="请输入搜索关键词"
+          size="small"
+          v-model="goodDto.search"
+        ></el-input>
+        <el-button type="primary" @click="searchGood()">搜索</el-button>
+      </div>
     </div>
     <el-table :data="good" style="width: 100%">
       <el-table-column prop="goodName" label="商品名称" width="180">
@@ -20,7 +25,7 @@
           <span v-if="scope.row.goodStatus == 0" style="color: red">下架</span>
         </template>
       </el-table-column>
-      <el-table-column label="编辑用户">
+      <el-table-column label="编辑商品">
         <template slot-scope="scope">
           <el-button size="mini" @click="update(scope.row)">编辑</el-button>
           <el-button
@@ -72,7 +77,6 @@
         >
       </div>
     </el-dialog>
-
   </div>
 </template>
 
