@@ -7,6 +7,7 @@ import Goods from '../components/Goods.vue'
 import Menu from '../components/Menu.vue'
 import Quanxian from '../components/QuanXian.vue'
 import User from '../components/User.vue'
+import Order from '../components/Order.vue'
 
 
 Vue.use(VueRouter)
@@ -45,6 +46,11 @@ const routes = [
         path: '/user',
         name: 'User',
         component: User
+      },
+      {
+        path: '/order',
+        name: 'Order',
+        component: Order
       }
     ]
   }

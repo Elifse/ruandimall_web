@@ -39,7 +39,7 @@ export default {
         },
         title: {
           left: "center",
-          text: "Large Area Chart",
+          text: "历年销量统计",
         },
         toolbox: {
           feature: {

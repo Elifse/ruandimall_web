@@ -1,9 +1,16 @@
 <template>
-  <div id="box">
+  <div id="box" >
+    <img src="../assets/e32d2523d3636745afc0092752c3af20.jpeg" id="logo">
     <div>
-      <div class="header_img">
-        <img src="../assets/logo.png" />
+
+        <!-- // 标题 -->
+      <div class="header_title">
+        <h1>Elifse商城后台管理系统</h1>
       </div>
+      <!-- <div class="header_img">
+        <img src="../assets/cutcamera.png" />
+      </div> -->
+      
       <el-card>
         <!-- rules 表单输入规则   ref 标记表单，让脚本可以方便的找到   model 必填属性，表单数据绑定-->
         <el-form
@@ -21,7 +28,7 @@
           </el-form-item>
 
           <el-form-item size="large">
-            <el-button type="primary" @click="loggin()">立即登录</el-button>
+            <el-button type="primary" @click="login()">立即登录</el-button>
             <el-button @click="reset()">重置</el-button>
           </el-form-item>
         </el-form>
@@ -50,7 +57,7 @@ export default {
     };
   },
   methods: {
-    loggin() {
+    login() {
       this.$refs.userMessage.validate((val) => {
         if (!val) {
           this.$message.error("表单验证不通过！");
@@ -79,21 +86,25 @@ export default {
 #box {
   width: 100vw;
   height: 100vh;
-  background: #79857c;
+  background: #f2f2f2;
   display: flow-root;
 }
 #box > div {
   width: 500px;
-  height: 300px;
-  margin: 200px auto;
+  height: 100px;
+  margin: 100px auto;
   position: relative;
+}
+#logo {
+  width: 20%;
+  margin: 50px auto;
 }
 .el-card {
   width: 500px;
   height: 300px;
-  margin: 200px auto;
+  margin: 100px auto;
 }
-.header_img {
+/* .header_img {
   width: 80px;
   height: 80px;
   background: white;
@@ -101,7 +112,7 @@ export default {
   position: absolute;
   top: -40px;
   left: 210px;
-}
+} */
 .header_img > img {
   width: 60px;
   height: 60px;

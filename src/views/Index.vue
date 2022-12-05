@@ -1,11 +1,11 @@
 <template>
   <div id="box">
     <div class="menu">
-      <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
+      <el-radio-group v-model="isCollapse" style="margin-top: 30px">
         <el-radio-button :label="false">展开</el-radio-button>
         <el-radio-button :label="true">收起</el-radio-button>
       </el-radio-group>
-      <el-menu
+      <el-menu id="menu"
         default-active="1-4-1"
         class="el-menu-vertical-demo"
         @open="handleOpen"
@@ -26,7 +26,7 @@
     <div class="content">
       <div class="header">
         <h1>
-          ManageSystem
+          Elifse商城后台管理系统
           <el-button class="logout" @click="logout">退出登录</el-button>
         </h1>
       </div>
@@ -44,6 +44,10 @@
 #box {
   width: 100vw;
   height: 100vh;
+}
+#menu {
+  width: 200px;
+  margin: 20px;
 }
 .menu {
   width: 200px;
