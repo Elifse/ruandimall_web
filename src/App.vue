@@ -11,16 +11,20 @@
     /> -->
     <!-- 组件渲染标签 -->
     <router-view />
+    <!-- 页脚 -->
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import { Button, DatePicker } from 'element-ui'
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
     'el-button': Button,
-    'el-date-picker': DatePicker
+    'el-date-picker': DatePicker,
+    'app-footer': Footer
   },
   data () {
     return {

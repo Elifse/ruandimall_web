@@ -1,4 +1,5 @@
 <template>
+
   <div id="box" >
     <img src="../assets/e32d2523d3636745afc0092752c3af20.jpeg" id="logo">
     <div>
@@ -85,7 +86,7 @@ export default {
 <style scoped="scoped">
 #box {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background: #f2f2f2;
   display: flow-root;
 }

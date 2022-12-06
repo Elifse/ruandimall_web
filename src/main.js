@@ -19,7 +19,7 @@ Vue.config.productionTip = false
 
 
 // 设置后端接口地址
-axios.defaults.baseURL = 'http://localhost:8090'
+axios.defaults.baseURL = 'http://elifse.cloud:8090'
 
 // 将axios设置为Vue的原型属性
 Vue.prototype.$http = axios

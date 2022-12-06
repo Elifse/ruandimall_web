@@ -43,21 +43,21 @@
 <style scoped>
 #box {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
 }
 #menu {
   width: 200px;
-  margin: 20px;
+  margin: 0px;
 }
 .menu {
   width: 200px;
-  height: 100%;
+  height: 95%;
   background-color: #ffffff;
   float: left;
 }
 .content {
   width: calc(100% - 200px);
-  height: 100%;
+  height: 95%;
   background-color: #ffffff;
   float: left;
 }
@@ -77,12 +77,12 @@
 }
 .container {
   width: 100%;
-  height: 90vh;
+  height: 95%;
   overflow: hidden;
 }
 .el-card {
-  margin: 10px;
-  height: 100%;
+  margin: 0px;
+  height: 95%;
   overflow: hidden;
 }
 </style>
