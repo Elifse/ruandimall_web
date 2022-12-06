@@ -61,7 +61,7 @@ export default {
     login() {
       this.$refs.userMessage.validate((val) => {
         if (!val) {
-          this.$message.error("表单验证不通过！");
+          this.$message.error("请检查输入的内容");
           return;
         }
         this.$http.post("/login", this.user).then((res) => {

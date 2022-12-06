@@ -10,20 +10,20 @@
       end-placeholder="结束日期"
     /> -->
     <!-- 组件渲染标签 -->
-    <router-view />
+    <router-view v-wechat-title="$route.meta.title + '-Elifse商城后台管理系统'" />
     <!-- 页脚 -->
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import { Button, DatePicker } from 'element-ui'
+// import { Button, DatePicker } from 'element-ui'
 import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
-    'el-button': Button,
-    'el-date-picker': DatePicker,
+    // 'el-button': Button,
+    // 'el-date-picker': DatePicker,
     'app-footer': Footer
   },
   data () {

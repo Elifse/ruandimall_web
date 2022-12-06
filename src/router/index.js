@@ -15,7 +15,10 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    component: Login
+    component: Login,
+    meta: {
+      title: '欢迎使用'
+    }
   },
   {
     path: '/index',
@@ -25,32 +28,50 @@ const routes = [
       {
         path: '/home',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta:{
+          title:'首页'
+        }
       },
       {
         path: '/goods',
         name: 'Goods',
-        component: Goods
+        component: Goods,
+        meta:{
+          title: '商品管理'
+        }
       },
       {
         path: '/menu',
         name: 'Menu',
-        component: Menu
+        component: Menu,
+        meta:{
+          title: '菜单管理'
+        }
       },
       {
         path: '/quanxian',
         name: 'Quanxian',
-        component: Quanxian
+        component: Quanxian,
+        meta:{
+          title: '权限管理'
+        }
       },
       {
         path: '/user',
         name: 'User',
-        component: User
+        component: User,
+        meta:{
+          title: '用户管理'
+        }
       },
       {
         path: '/order',
         name: 'Order',
-        component: Order
+        component: Order,
+        meta:{
+          title: '订单管理'
+        }
       }
     ]
   }

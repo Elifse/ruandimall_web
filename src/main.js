@@ -10,6 +10,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 // 导入echarts
 import * as echarts from 'echarts'
 
+import VueWechatTitle from 'vue-wechat-title'; 
+
 
 Vue.prototype.$echarts = echarts
 
@@ -27,6 +29,9 @@ Vue.prototype.$http = axios
 
 // 将element-ui注册为全局组件
 Vue.use(ElementUI)
+
+// 将vue-wechat-title注册为全局组件
+Vue.use(VueWechatTitle)
 
 new Vue({
   router,
