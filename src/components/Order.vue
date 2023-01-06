@@ -14,24 +14,23 @@
     </div>
     <!-- 表格 -->
     <el-table :data="order" style="width: 100%">
-      <el-table-column prop="orderId" label="订单编号" width="180"></el-table-column>
-      <el-table-column prop="orderName" label="商品名称" width="180"></el-table-column>
+      <el-table-column prop="orderId" label="订单编号" width="80"></el-table-column>
+      <el-table-column prop="orderName" label="商品名称" width="200"></el-table-column>
       <el-table-column prop="orderAddress" label="用户地址" width="180"></el-table-column>
       <el-table-column prop="orderGoodname" label="订单商品名称" width="180"></el-table-column>
       <el-table-column prop="orderPrice" label="商品总价" width="180"></el-table-column>
-      <el-table-column prop="orderInfo" label="订单信息" width="180"></el-table-column>
+      <el-table-column prop="orderInfo" label="订单信息" width="300"></el-table-column>
       <el-table-column prop="orderStatus" label="订单状态" width="180">
-                  <template slot-scope="scope">
-            <span v-if="scope.row.orderStatus == 0" style="color: gray">未支付</span>
-            <span v-if="scope.row.orderStatus == 1" style="color: yellow">已支付</span>
-            <span v-if="scope.row.orderStatus == 2" style="color: blue">已发货</span>
-            <span v-if="scope.row.orderStatus == 3" style="color: pink">已签收</span>
-            <span v-if="scope.row.orderStatus == 4" style="color: green">已完成</span>
-            <span v-if="scope.row.orderStatus == 5" style="color: red">存在异常</span>
-
-          </template>
+        <template slot-scope="scope">
+          <span v-if="scope.row.orderStatus == 0" style="color: gray">未支付</span>
+          <span v-if="scope.row.orderStatus == 1" style="color: yellow">已支付</span>
+          <span v-if="scope.row.orderStatus == 2" style="color: blue">已发货</span>
+          <span v-if="scope.row.orderStatus == 3" style="color: pink">已签收</span>
+          <span v-if="scope.row.orderStatus == 4" style="color: green">已完成</span>
+          <span v-if="scope.row.orderStatus == 5" style="color: red">存在异常</span>
+        </template>
       </el-table-column>
-      <el-table-column label="操作" width="180">
+      <el-table-column label="操作" >
         <template slot-scope="scope">
           <el-button size="mini" @click="update(scope.row)">编辑</el-button>
           <el-button

@@ -27,6 +27,10 @@
       <div class="header">
         <h1>
           Elifse商城后台管理系统
+          <!-- 显示当前用户名 -->
+          <span style="font-size: 20px">
+            欢迎您，{{ username }}
+          </span>
           <el-button class="logout" @click="logout">退出登录</el-button>
         </h1>
       </div>
@@ -90,13 +94,16 @@
 <script>
 export default {
   data() {
+    let username = window.sessionStorage.getItem("userName");
     return {
       isCollapse: true,
       menu: "",
+      username: username,
     };
   },
   created() {
     this.queryMenu();
+    // this.getUsername();
   },
   methods: {
     // 切换菜单展开关闭
@@ -118,6 +125,10 @@ export default {
       window.sessionStorage.removeItem("token");
       this.$router.push("/login");
     },
+    // //获取当前用户名
+    // getUsername() {
+    //   this.username = window.sessionStorage.getItem("userName");
+    // },
   },
 };
 </script>

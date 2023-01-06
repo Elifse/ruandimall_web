@@ -53,7 +53,6 @@
         </el-form-item>
         <el-form-item
           label="密码"
-          v-show="dialogTitle == '添加用户'"
           prop="password"
         >
           <el-input autocomplete="off" v-model="userDetail.password"></el-input>

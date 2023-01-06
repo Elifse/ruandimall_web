@@ -61,7 +61,7 @@
           </el-select>
         </el-form-item>
       </el-form>
-      <div slot="footer" class="dialog-footer">
+      <div slot="footer" class="dialog-footer">~
         <el-button @click="close()">取 消</el-button>
         <el-button
           type="primary"

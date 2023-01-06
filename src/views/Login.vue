@@ -72,6 +72,8 @@ export default {
           this.$message.success(res.data.msg);
           //登录成功，设置一个token
           window.sessionStorage.setItem("token", "111111");
+          // 将用户名存储到sessionStorage中
+          window.sessionStorage.setItem("userName", this.user.userName);
           this.$router.push("/home");
         });
       });
